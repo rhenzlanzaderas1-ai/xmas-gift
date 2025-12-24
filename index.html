@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Christmas & Love</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div id="snow-container"></div>
+    <div id="hearts-container"></div>
+
+    <!-- Main Container -->
+    <main class="app-container">
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <h1 class="main-title">Merry Christmas <br>&<br> I Love You</h1>
+            <p class="subtitle">A collection of virtual gifts and letters, just for you, Julie Anne.</p>
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="sticky-nav">
+            <button class="nav-btn active" data-tab="gifts">
+                <i class="fa-solid fa-gift"></i> Virtual Gifts
+            </button>
+            <button class="nav-btn" data-tab="letters">
+                <i class="fa-solid fa-envelope"></i> My Letters
+            </button>
+        </nav>
+
+        <!-- Content Area -->
+        <div class="content-wrapper">
+
+            <!-- Gifts Section -->
+            <section id="gifts" class="tab-content active">
+                <div class="intro-text">
+                    <h2>Pick a Gift, or Pick them all!</h2>
+                    <p>Tap a box to unwrap a surprise.</p>
+                </div>
+                <div class="grid-container" id="gift-grid">
+                    <!-- Gifts injected by JS -->
+                </div>
+            </section>
+
+            <!-- Letters Section -->
+            <section id="letters" class="tab-content">
+                <div class="intro-text">
+                    <h2>Read My Heart</h2>
+                    <p>Open an envelope to read a letter.</p>
+                </div>
+                <div class="grid-container" id="letter-grid">
+                    <!-- Letters injected by JS -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content glass-panel">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div id="modal-body">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Control (Optional, muted by default for UX) -->
+    <div class="audio-control">
+        <audio id="bg-music" loop>
+            <source src="assets/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="music-toggle" title="Play Music">
+            <i class="fa-solid fa-music"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
